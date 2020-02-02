@@ -7,8 +7,8 @@
   "scripts": {
     "start": "cross-env PORT=10888 react-scripts start",
     "build": "react-scripts build",
-    "deploy": "vk-miniapps-deploy",
-    "clean-source": "rimraf README.md src webroot package.json"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
